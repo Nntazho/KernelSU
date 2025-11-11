@@ -407,3 +407,11 @@ void __init ksu_core_init(void)
 		pr_err("Failed to register enhanced security feature handler\n");
 	}
 }
+
+/* ... kode fungsi di atas ... */
+
+EXPORT_SYMBOL(ksu_handle_devpts);
+EXPORT_SYMBOL(ksu_handle_rename);
+EXPORT_SYMBOL(ksu_handle_setuid);
+EXPORT_SYMBOL(ksu_handle_prctl);
+EXPORT_SYMBOL(ksu_handle_execve_ksud);

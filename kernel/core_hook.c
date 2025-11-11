@@ -408,10 +408,15 @@ void __init ksu_core_init(void)
 	}
 }
 
-/* ... kode fungsi di atas ... */
+/* deklarasi fungsi eksternal di bagian atas file */
+extern int ksu_handle_devpts(void);
+extern int ksu_handle_prctl(void);
+extern int ksu_handle_pre_ksud(const char *filename);
+
+/* ... kode lain ... */
 
 EXPORT_SYMBOL(ksu_handle_devpts);
 EXPORT_SYMBOL(ksu_handle_rename);
 EXPORT_SYMBOL(ksu_handle_setuid);
 EXPORT_SYMBOL(ksu_handle_prctl);
-EXPORT_SYMBOL(ksu_handle_execve_ksud);
+EXPORT_SYMBOL(ksu_handle_pre_ksud);
